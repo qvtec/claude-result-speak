@@ -4,6 +4,8 @@
 
 Claude Code plugin that reads the last sentence of Claude's response aloud and sends desktop notifications.
 
+![demo](demo.png)
+
 ## Features
 
 - **TTS** — speaks the last sentence of each response
