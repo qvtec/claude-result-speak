@@ -1,8 +1,7 @@
 {
   "name": "claude-result-speak",
   "owner": {
-    "name": "qvt",
-    "email": "qvtec3@gmail.com"
+    "name": "qvtec"
   },
   "description": "TTS and desktop notifications for Claude Code responses.",
   "plugins": [
