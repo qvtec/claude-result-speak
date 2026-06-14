@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "claude-result-speak@claude-result-speak": true
+  }
+}

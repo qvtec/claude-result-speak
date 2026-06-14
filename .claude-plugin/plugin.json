@@ -1,0 +1,122 @@
+{
+  "name": "claude-result-speak",
+  "displayName": "Claude Result Speak",
+  "version": "1.0.0",
+  "description": "Reads the last sentence of Claude's response aloud via TTS. Supports macOS (say) and Windows/WSL2 (PowerShell).",
+  "author": {
+    "name": "qvt",
+    "url": "https://github.com/qvt"
+  },
+  "license": "MIT",
+  "keywords": ["tts", "notification", "accessibility", "audio"],
+  "userConfig": {
+    "tts_enabled": {
+      "type": "boolean",
+      "title": "TTS",
+      "description": "Enable or disable text-to-speech readout",
+      "default": true
+    },
+    "notify_enabled": {
+      "type": "boolean",
+      "title": "Desktop notifications",
+      "description": "Enable or disable desktop notifications",
+      "default": true
+    },
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Language for notification messages (ja / en)",
+      "default": "en"
+    },
+    "message_complete": {
+      "type": "string",
+      "title": "Message (complete)",
+      "description": "Completion notification message. Leave blank to use the language default.",
+      "default": ""
+    },
+    "message_permission": {
+      "type": "string",
+      "title": "Message (permission)",
+      "description": "Permission prompt notification message. Leave blank to use the language default.",
+      "default": ""
+    },
+    "message_idle": {
+      "type": "string",
+      "title": "Message (idle)",
+      "description": "Idle notification message. Leave blank to use the language default.",
+      "default": ""
+    },
+    "voice_mac": {
+      "type": "string",
+      "title": "Voice (Mac)",
+      "description": "macOS TTS voice name (e.g. Kyoko, Alex, Samantha)",
+      "default": "Kyoko"
+    },
+    "voice_windows": {
+      "type": "string",
+      "title": "Voice (Windows)",
+      "description": "Windows TTS voice name (e.g. Microsoft Haruka Desktop). Leave blank for system default.",
+      "default": ""
+    },
+    "rate_mac": {
+      "type": "number",
+      "title": "Speech rate (Mac)",
+      "description": "Words per minute (default: 250)",
+      "default": 250,
+      "min": 50,
+      "max": 500
+    },
+    "rate_windows": {
+      "type": "number",
+      "title": "Speech rate (Windows)",
+      "description": "Rate from -10 to 10 (default: 3)",
+      "default": 3,
+      "min": -10,
+      "max": 10
+    },
+    "max_chars": {
+      "type": "number",
+      "title": "Max characters",
+      "description": "Maximum characters to read aloud (default: 200)",
+      "default": 200,
+      "min": 50,
+      "max": 500
+    },
+    "sound_complete": {
+      "type": "string",
+      "title": "Sound (complete)",
+      "description": "macOS notification sound. Options: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink",
+      "default": "Blow"
+    },
+    "sound_permission": {
+      "type": "string",
+      "title": "Sound (permission)",
+      "description": "macOS notification sound. Options: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink",
+      "default": "Pop"
+    },
+    "sound_idle": {
+      "type": "string",
+      "title": "Sound (idle)",
+      "description": "macOS notification sound. Options: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink",
+      "default": "Tink"
+    },
+    "emoji_complete": {
+      "type": "string",
+      "title": "Emoji (complete)",
+      "description": "Emoji shown in the completion notification",
+      "default": "✨"
+    },
+    "emoji_permission": {
+      "type": "string",
+      "title": "Emoji (permission)",
+      "description": "Emoji shown in the permission prompt notification",
+      "default": "⚠️"
+    },
+    "emoji_idle": {
+      "type": "string",
+      "title": "Emoji (idle)",
+      "description": "Emoji shown in the idle notification",
+      "default": "💬"
+    }
+  }
+}

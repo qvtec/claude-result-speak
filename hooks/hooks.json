@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'result=$(ls -dt \"$HOME/.claude/plugins/cache/claude-result-speak/claude-result-speak\"/*/  2>/dev/null | head -1); r=\"${CLAUDE_PLUGIN_ROOT:-}\"; [ -z \"$r\" ] && r=\"${result%/}\"; [ -n \"$r\" ] && exec \"$r/scripts/notify.sh\" complete'"
+          },
+          {
+            "type": "command",
+            "command": "bash -c 'result=$(ls -dt \"$HOME/.claude/plugins/cache/claude-result-speak/claude-result-speak\"/*/  2>/dev/null | head -1); r=\"${CLAUDE_PLUGIN_ROOT:-}\"; [ -z \"$r\" ] && r=\"${result%/}\"; [ -n \"$r\" ] && exec \"$r/scripts/say-last-sentence.sh\"'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'result=$(ls -dt \"$HOME/.claude/plugins/cache/claude-result-speak/claude-result-speak\"/*/  2>/dev/null | head -1); r=\"${CLAUDE_PLUGIN_ROOT:-}\"; [ -z \"$r\" ] && r=\"${result%/}\"; [ -n \"$r\" ] && exec \"$r/scripts/notify.sh\" permission'"
+          }
+        ]
+      },
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'result=$(ls -dt \"$HOME/.claude/plugins/cache/claude-result-speak/claude-result-speak\"/*/  2>/dev/null | head -1); r=\"${CLAUDE_PLUGIN_ROOT:-}\"; [ -z \"$r\" ] && r=\"${result%/}\"; [ -n \"$r\" ] && exec \"$r/scripts/notify.sh\" idle'"
+          }
+        ]
+      }
+    ]
+  }
+}
