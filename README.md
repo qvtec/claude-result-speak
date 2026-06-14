@@ -65,7 +65,7 @@ Add an `env` block to `~/.claude/settings.json`:
 {
   "env": {
     "CLAUDE_RESULT_SPEAK_LANGUAGE": "ja",
-    "CLAUDE_RESULT_SPEAK_TTS_ENABLED": "false"
+    "CLAUDE_RESULT_SPEAK_TTS_ENABLED": "true"
   }
 }
 ```
