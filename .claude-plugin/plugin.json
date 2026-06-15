@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Reads the last sentence of Claude's response aloud via TTS. Supports macOS (say) and Windows/WSL2 (PowerShell).",
   "author": {
-    "name": "qvt",
-    "url": "https://github.com/qvt"
+    "name": "qvtec",
+    "url": "https://github.com/qvtec"
   },
   "license": "MIT",
   "keywords": ["tts", "notification", "accessibility", "audio"],
